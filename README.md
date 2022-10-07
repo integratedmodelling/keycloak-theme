@@ -1,4 +1,4 @@
-## Integrated Modelling Partnersip - Keycloak theme
+## Integrated Modelling Partnership - Keycloak theme
 
 We expect [Docker](https://docs.docker.com/engine/install/) and [docker compose](https://docs.docker.com/compose/) to be available:
 

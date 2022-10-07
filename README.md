@@ -17,6 +17,11 @@ The _Admin console_ http://localhost:8078/admin/
 
 * https://www.keycloak.org/docs/latest/server_development/#_themes
 
+### Theme templates
+
+* Terms and conditions - `themes/im/login/terms.ftl` - See:
+  [terms.ftl](https://github.com/keycloak/keycloak/blob/19.0.3/themes/src/main/resources/theme/base/login/terms.ftl).
+  The `termsText` property comes from properties file. [messages_en.properties](https://github.com/keycloak/keycloak/blob/1641fbb0abf316e3c7d431980632ba37f81056d3/themes/src/main/resources/theme/base/login/messages/messages_en.properties#L68-L70)
 
 ## Other tasks
 

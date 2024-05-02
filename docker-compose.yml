@@ -1,17 +1,45 @@
-version: "3.8"
-
 services:
-  server:
-    image: quay.io/keycloak/keycloak:19.0.2
-    container_name: keycloak-server
-    restart: always
+  keycloak-demo:
+    image: quay.io/keycloak/keycloak:latest
+    command: ["--verbose","start-dev"]
     environment:
-      - KEYCLOAK_ADMIN=admin
-      - KEYCLOAK_ADMIN_PASSWORD=admin
-      - KC_HOSTNAME=localhost
+      KC_DB: postgres
+      KC_DB_URL_HOST: postgres_keycloak_demo
+      KC_DB_URL_DATABASE: keycloak
+      KC_DB_PASSWORD: password
+      KC_DB_USERNAME: keycloak
+      KC_DB_SCHEME: public
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
     ports:
-      - 8078:8080
+      - "8078:8080"
     volumes:
-      - ./data/import/im.json:/opt/keycloak/data/import/im.json
-      - ./themes/im:/opt/keycloak/themes/im
-    command: ["start-dev", "--import-realm", "--spi-theme-static-max-age=-1", "--spi-theme-cache-themes=false", "--spi-theme-cache-templates=false"]
+      #- /theme:/opt/keycloak/themes
+      - keycloak_data:/opt/keycloak/data
+    depends_on:
+      postgres_keycloak_demo:
+        condition: service_healthy
+    networks:
+      - keycloak_demo_dev_network
+
+  postgres_keycloak_demo:
+    image: postgres:14.5-bullseye
+    command: postgres -c 'max_connections=200'
+    volumes:
+      - pgdata_keycloack_demo:/var/lib/postgresql/pgdata_keycloack_demo
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: password
+    healthcheck:
+      test: "exit 0"
+    ports:
+      - "5436:5432"
+    networks:
+      - keycloak_demo_dev_network
+volumes:
+  pgdata_keycloack_demo:
+  keycloak_data:
+networks:
+  keycloak_demo_dev_network:
+    driver: bridge

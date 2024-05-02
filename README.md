@@ -23,18 +23,9 @@ The _Admin console_ http://localhost:8078/admin/
   [terms.ftl](https://github.com/keycloak/keycloak/blob/19.0.3/themes/src/main/resources/theme/base/login/terms.ftl).
   The `termsText` property comes from properties file. [messages_en.properties](https://github.com/keycloak/keycloak/blob/1641fbb0abf316e3c7d431980632ba37f81056d3/themes/src/main/resources/theme/base/login/messages/messages_en.properties#L68-L70)
 
-## Other tasks
 
-### Export `im` realm
+### Overriding the built-in templates
 
-To export `im` realm changes and share across the team, we use `kc.sh export`
-
-Assuming the service is running, execute `kc.sh export [...]` inside the container, e.g.
-
-```
-docker compose exec server /opt/keycloak/bin/kc.sh export --file /opt/keycloak/data/import/im.json --realm im
-```
-
-This will make the necessary changes under `./data/import/im.json`. Commit and push the changes.
-
-More info: https://www.keycloak.org/server/importExport
+* While creating custom themes, especially when overriding templates, it may be useful to use the built-in templates as
+  a reference. These can be found within the theme directory of `../lib/lib/main/org.keycloak.keycloak-themes-24.0.3.jar`, which can be opened using any
+  standard ZIP archive tool.

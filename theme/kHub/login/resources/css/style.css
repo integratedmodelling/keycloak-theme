@@ -2,157 +2,199 @@
     background-color:aqua !important
 } */
 .au-top-text {
-    text-align: center;
-    color: rgb(96,125,139); 
+  text-align: center;
+  color: rgb(96, 125, 139);
 }
+
 .au-top-content {
-    font-size: 1.4em;
-    font-weight: 300;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+#au-layout {
+  min-height: 680px !important;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-appear-class {
+  opacity: 0;
+}
+
+.au-container {
+  width: 390px;
+}
+
+.au-app-name {
+  font-size: 5em;
+  line-height: 1;
+  margin: 0 0 0.1em 0;
+  padding: 0;
+  font-weight: 300;
+  color: #424242
+}
+
+.au-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ks-logo {
+  padding: 24px;
+}
+
+.au-wrapper {
+  min-width: 70%;
+  max-width: 70%;
+}
+
+.au-wrapper strong {
+  font-weight: 400;
+}
+
+.au-top-text {
+  text-align: center;
+  color: rgb(96, 125, 139);
+}
+
+.au-top-text .au-top-content {
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+.au-top-info {
+  color: rgb(96, 125, 139);
+  text-align: justify;
+  margin: 14px 0;
+}
+
+.au-top-info ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.au-top-info ul li {
+  padding-left: 1.3em;
+}
+
+.au-top-info ul li:before {
+  content: '\f012C';
+  font-family: 'Material Design Icons';
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em;
+}
+
+.au-form-container .q-input {
+  font-size: 1em !important;
+}
+
+.au-form-container .au-btn-container {
+  margin-top: 1em;
+}
+
+.au-form-container .au-btn-container .q-btn {
+  /* border: 1px solid rgb(96, 125, 139); */
+  margin: 5px 0 0 0;
+}
+
+.au-bottom-links {
+  text-align: right;
+  color: rgb(96, 125, 139);
+}
+
+.au-bottom-links p {
+  margin: 0.4em;
+}
+
+.au-help {
+  font-size: smaller;
+  padding-top: 3em;
+  color: #bdbdbd;
+  width: 70%;
+  margin: auto;
+}
+
+.au-justify {
+  text-align: justify;
+}
+
+.au-justify .au-force-justify {
+  line-height: 0;
+  display: inline-block;
+  width: 100%;
+}
+
+#au-fake-logo-container {
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 0.5s ease-out, height 0.5s ease-out, transform 0.5s ease-out, top 0.5s ease-out, left 0.5s ease-out, opacity 1ms;
+}
+
+#au-fake-logo-container svg,
+#au-fake-logo-container svg.ks-circle-path,
+#au-fake-logo-container .au-app-name {
+  transition: width 0.5s ease-out, height 0.5s ease-out, transform 0.5s ease-out, top 0.5s ease-out, left 0.5s ease-out, opacity 1ms;
+}
+
+.au-loggedin .au-container {
+  opacity: 0;
+}
+
+.au-loggedin .au-content {
+  transition: opacity 0.5s ease-out;
+}
+
+.au-loggedin #au-fake-logo-container {
+  justify-content: start;
+  align-items: start;
+  width: 10px !important;
+  height: 10px !important;
+  opacity: 1;
+  top: 5px !important;
+  left: 0px !important;
+  transform: translate(10px, 5px);
+}
+
+.au-loggedin #au-fake-logo-container .au-fake-spinner {
+  height: 0;
+}
+
+.au-loggedin #au-fake-logo-container .ks-circle-container {
+  margin-left: -70px;
+  padding: 0 4px !important;
+  margin-top: -3px;
+}
+
+.au-loggedin #au-fake-logo-container svg {
+  width: 50px;
+  height: 50px;
+}
+
+.au-loggedin #au-fake-logo-container svg.ks-circle-path {
+  transform: scale(0.3);
+}
+
+.k-input-login-style {
+  & .q-field__label {
+    font-size: 14px !important;
   }
-  #au-layout {
-    min-height: 680px !important;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .custom-appear-class {
-    opacity: 0;
-  }
-  .au-container {
-    width: 390px;
-  }
-  .au-app-name {
-    font-size: 5em;
-    line-height: 1;
-    margin: 0 0 0.1em 0;
-    padding: 0;
-    font-weight: 300;
-    color: #424242
-  }
-  .au-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .ks-logo {
-    padding: 24px;
-   }
-  .au-wrapper {
-    min-width: 70%;
-    max-width: 70%;
-  }
-  .au-wrapper strong {
-    font-weight: 400;
-  }
-  .au-top-text {
-    text-align: center;
-    color: rgb(96,125,139);
-  }
-  .au-top-text .au-top-content {
-    font-size: 1.4em;
-    font-weight: 300;
-  }
-  .au-top-info {
-    color: rgb(96,125,139);
-    text-align: justify;
-    margin: 14px 0;
-  }
-  .au-top-info ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  .au-top-info ul li {
-    padding-left: 1.3em;
-  }
-  .au-top-info ul li:before {
-    content: '\f012C';
-    font-family: 'Material Design Icons';
-    display: inline-block;
-    margin-left: -1.3em;
-    width: 1.3em;
-  }
-  .au-form-container .q-input {
-    font-size: 1em !important;
-  }
-  .au-form-container .au-btn-container {
-    margin-top: 1em;
-  }
-  .au-form-container .au-btn-container .q-btn {
-    border: 1px solid rgb(96,125,139);
-    margin: 5px 0 0 0;
-  }
-  .au-bottom-links {
-    text-align: right;
-    color: rgb(96,125,139);
-  }
-  .au-bottom-links p {
-    margin: 0.4em;
-  }
-  /* .au-help {
-    font-size: smaller;
-    padding-top: 3em;
-    color: $grey-5;
-    width: 70%;
-    margin: auto;
-  } */
-  .au-justify {
-    text-align: justify;
-  }
-  .au-justify .au-force-justify {
-    line-height: 0;
-    display: inline-block;
-    width: 100%;
-  }
-  #au-fake-logo-container {
-    position: absolute;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: width 0.5s ease-out, height 0.5s ease-out, transform 0.5s ease-out, top 0.5s ease-out, left 0.5s ease-out, opacity 1ms;
-  }
-  #au-fake-logo-container svg,
-  #au-fake-logo-container svg.ks-circle-path,
-  #au-fake-logo-container .au-app-name {
-    transition: width 0.5s ease-out, height 0.5s ease-out, transform 0.5s ease-out, top 0.5s ease-out, left 0.5s ease-out, opacity 1ms;
-  }
-  .au-loggedin .au-container {
-    opacity: 0;
-  }
-  .au-loggedin .au-content {
-    transition: opacity 0.5s ease-out;
-  }
-  .au-loggedin #au-fake-logo-container {
-    justify-content: start;
-    align-items: start;
-    width: 10px !important;
-    height: 10px !important;
-    opacity: 1;
-    top: 5px !important;
-    left: 0px !important;
-    transform: translate(10px, 5px);
-  }
-  .au-loggedin #au-fake-logo-container .au-fake-spinner {
-    height: 0;
-  }
-  .au-loggedin #au-fake-logo-container .ks-circle-container {
-    margin-left: -70px;
-    padding: 0 4px !important;
-    margin-top: -3px;
-  }
-  .au-loggedin #au-fake-logo-container svg {
-    width: 50px;
-    height: 50px;
-  }
-  .au-loggedin #au-fake-logo-container svg.ks-circle-path {
-    transform: scale(0.3);
-  }
-  /* .au-loggedin #au-fake-logo-container .au-app-name {
+}
+
+.kh-toggle-remember {
+  margin-right: 1em;
+}
+
+/* .au-loggedin #au-fake-logo-container .au-app-name {
     font-size: 2em;
     transform: translate(62px, 12px);
     color: $grey-8;
   } */
-  

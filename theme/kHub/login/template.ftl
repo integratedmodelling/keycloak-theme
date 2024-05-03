@@ -39,65 +39,13 @@ ${url.resourcesPath}
 </head>
 <body>
   <div id="q-app" >
-    <div id="au-layout" view="hHh lpR fFf" >
-      <div class="au-container">
-        <div class="au-fixed-center text-center au-container">
-          <div class="au-logo-container ks-container " >
-            <!-- banner -->
-            <div class="au-logo"  wrapper-id="au-layout" >
-              <#include "fragments/banner.ftl">                        
-            </div>
-            <div class="app-name au-app-name">
-              k<span style="color:#d6151a">.</span>Hub
-            </div>
-          </div>
-        </div>
-  <div class="full-width column content-center au-form-container">
-    <div class="au-wrapper">
-    <#--  <div class="window-height window-width row justify-center bg-grey-4">  -->
-      <!-- 
-        Header 
-      -->
-      <#--  <div class="full-width row justify-center">  -->
-        <#include "fragments/header.ftl">
-        </div>
-      </div>
-      <!-- 
-        Content 
-      -->
-      <#--  <div class="row justify-center" style="max-width: 500px;"> 
-        <q-card class="full-width bg-white column justify-center">  -->
-          <!-- 
-            Header 
-          -->
-          <div class="full-width row justify-center">
-            <#include "fragments/header.ftl">
-          </div>
-          <!-- form -->
-          <div :class="{ ' q-pt-md q-pr-md q-pl-md': $q.screen.xs, 'q-pt-lg q-pr-lg q-pl-lg' : $q.screen.gt.xs }">
-        <#nested "form">
-          </div>
-          <!-- social providers -->
-          <#-- <#if social.providers??>
-            <#nested "socialProviders">
-    </#if> -->
-    <#-- </q-card> -->
-      <!-- global options -->
-      <#-- <div :class="{ 'q-pt-xs': $q.screen.xs, 'q-pt-sm': $q.screen.gt.xs }">
-        <#include "fragments/options.ftl">
-          </div> -->
-          </div>
-          <!-- 
-        Footer 
-      -->
-          <div class="full-width row justify-center">
-            <#-- <#include "fragments/footer.ftl"> -->
-          </div>
-          </div>
-          </div>
-          </div>
-          </div>
-          <!-- 
+  <#--  <#include "fragments/header.ftl">  -->
+  
+      <#--  <#include "fragments/banner.ftl">                          -->
+    
+  <#nested "form">
+  <#--  <#include "fragments/footer.ftl">  -->
+  <!-- 
     Use Vue and Quasar with UMD version
     For more information, refer to https://quasar.dev/start/umd#installation
   -->
@@ -106,14 +54,16 @@ ${url.resourcesPath}
           <script src="${url.resourcesPath}/js/config.js"></script>
           <script src="${url.resourcesPath}/js/quasar.js"></script>
           <!-- Install Quasar language pack -->
-          <#--  <#if properties.locales?has_content>
+          <#if properties.locales?has_content>
             <#list properties.locales?split(',') as locale>
               <script>
               Quasar.lang.set(Quasar.lang.${locale})
               </script>
             </#list>
-          </#if>  -->
+          </#if>
           </body>
+          
 
   </html>
+  
 </#macro>

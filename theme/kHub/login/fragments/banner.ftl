@@ -1,7 +1,7 @@
 <#--  <div class="row justify-center">  -->
   <#--  <img src="${url.resourcesPath}/img/logo.png" style="max-width:100%; max-height:100%;" />  -->
-<#--  <div class="au-logo-container">
-  <div class="au-logo"  wrapper-id="au-layout" >  -->
+<div class="au-logo-container">
+  <div class="au-logo"  wrapper-id="au-layout" >
     <div class="ks-inner">
       <svg class="ks-logo" width="200" height="200" viewBox="0 0 180 180"
            version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -14,10 +14,10 @@
       </svg>
     </div>
   </div>
-  <#--  <div class="app-name au-app-name">
+  <div class="app-name au-app-name">
     k<span style="color:#d6151a">.</span>Hub
   </div>
-</div>  -->
+</div>
 <style scoped lang="stylus">
 
 </style>  

@@ -40,28 +40,34 @@ ${url.resourcesPath}
 <body>
   <div id="q-app" >
   <#--  <#include "fragments/header.ftl">  -->
-  
-      <#--  <#include "fragments/banner.ftl">                          -->
-    
-  <#nested "form">
-  <#--  <#include "fragments/footer.ftl">  -->
+  <div id="au-layout" view="hHh lpR fFf" >
+      <div class="au-container">
+        <div class="au-fixed-center text-center au-container">
+          <#include "fragments/banner.ftl">                            
+          <#nested "form">
+          <#include "fragments/footer.ftl">  
+      </div>
+    </div>
+  </div> 
+
+
   <!-- 
     Use Vue and Quasar with UMD version
     For more information, refer to https://quasar.dev/start/umd#installation
   -->
-          <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/quasar@2.15.3/dist/quasar.umd.prod.js"></script>
-          <script src="${url.resourcesPath}/js/config.js"></script>
-          <script src="${url.resourcesPath}/js/quasar.js"></script>
-          <!-- Install Quasar language pack -->
-          <#if properties.locales?has_content>
-            <#list properties.locales?split(',') as locale>
-              <script>
-              Quasar.lang.set(Quasar.lang.${locale})
-              </script>
-            </#list>
-          </#if>
-          </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quasar@2.15.3/dist/quasar.umd.prod.js"></script>
+  <script src="${url.resourcesPath}/js/config.js"></script>
+  <script src="${url.resourcesPath}/js/quasar.js"></script>
+  <!-- Install Quasar language pack -->
+  <#if properties.locales?has_content>
+    <#list properties.locales?split(',') as locale>
+      <script>
+      Quasar.lang.set(Quasar.lang.${locale})
+      </script>
+    </#list>
+  </#if>
+</body>
           
 
   </html>

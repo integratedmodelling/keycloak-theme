@@ -1,0 +1,350 @@
+  color lightness(main-color, 90%)
+//app global constants
+main-color = rgb(96,125,139)
+main-jj = rgb(96,125,139, 0.2)
+main-controls = secondary
+main-controls-smooth = rgba(0,126,255,.05)
+main-green = rgb(231,255,219)
+main-cyan = rgb(228,253,255)
+main-yellow = #F2C037
+main-orange = rgb(255,122,0)
+main-red = rgb(255, 100, 100)
+
+
+// app global css
+.text-k-main
+  color main-color
+
+.text-k-main-light
+  color lightness(main-color, 90%)
+
+.text-k-controls
+  color main-controls
+
+.text-k-yellow
+  color main-yellow
+
+.text-k-red
+  color main-red
+
+.bg-k-main
+  background main-color
+
+.bg-k-main-light
+  background lightness(main-color, 95%)
+
+.bg-k-controls
+  background main-controls
+
+.bg-k-yellowt
+  background main-yellow
+
+.bg-k-red
+  background main-red
+
+body
+  color grey-9
+  strong
+    color main-color
+  .kh-layout-page
+    h1
+      font-size 1.7em
+      line-height 1.7em
+      margin-top 1.4em;
+      margin-block-end 1.2em;
+    h2
+      font-size 1.6em
+      line-height 1.6em
+      margin-block-start: 1.3em;
+      margin-block-end: 1.1em;
+    h3
+      font-size 1.5em
+      line-height 1.5em
+      margin-block-start: 1.2em;
+      margin-block-end: 1em;
+      font-weight 300
+    h4
+      font-size 1.4em
+      line-height 1.4em
+      margin-block-start: 1.1em;
+      margin-block-end: .9em;
+      font-weight 300
+    .kh-h-first
+      margin-block-start 0 !important
+    p, ul
+      margin-bottom .8em
+      line-height 1.5em
+      li
+        margin-bottom .5em
+.kh-headers
+  h1
+    font-size 1.7em
+    line-height 1.7em
+    margin-top: 1.4em;
+    margin-block-end: 1.2em;
+  h2
+    font-size 1.6em
+    line-height 1.6em
+    margin-block-start: 1.3em;
+    margin-block-end: 1.1em;
+  h3
+    font-size 1.5em !important
+    line-height 1.5em !important
+    margin-block-start: 1.2em;
+    margin-block-end: 1em;
+    font-weight 300
+  h4
+    font-size 1.4em
+    line-height 1.4em
+    margin-block-start: 1.1em;
+    margin-block-end: .9em;
+    font-weight 300
+  .kh-h-first
+    margin-block-start 0 !important
+.kh-headers-dialog
+  h1
+    font-size 1.7em
+    line-height 1.7em
+  h2
+    font-size 1.6em
+    line-height 1.6em
+  h3
+    font-size 1.5em !important
+    line-height 1.5em !important
+    font-weight 300
+  h4
+    font-size 1.4em
+    line-height 1.4em
+    font-weight 300
+  .kh-h-first
+    margin-block-start 0 !important
+.kh-link-container
+  padding 0 10px
+.kh-link
+  display inline-block
+  text-decoration none
+  color #0277bd
+  cursor pointer
+  font-weight normal
+  .q-focus-helper
+    display none
+  &:visited
+    color cyan-9
+  &:not(.disabled):hover::after
+      width: 100%;
+  &.disabled
+    cursor default !important
+  i
+    display inline-block
+    margin-right 2px
+  img
+    width 14px
+    display inline-block
+    margin-right 4px
+    vertical-align text-bottom
+  &::after
+    content ''
+    display block
+    width 0
+    border-bottom-width 1px
+    border-bottom-style solid
+    transition width .3s
+// administration common styles
+.kh-banner-link
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+  outline: 0;
+  transition: color .28s ease-in-out;
+.ka-table
+  border 1px solid #eee
+  margin-bottom 3em
+  .ka-not-available
+    text-align center
+.ka-not-available
+  color grey-6
+  font-style italic
+.ka-refresh
+  opacity .3
+  transition all .3s
+  &:hover
+    opacity 1
+.ka-refreshing
+  animation:spin 1s linear infinite;
+.col
+  &.ka-group-icon-col
+  &.ka-role-icon-col
+    min-width 20px
+    max-width 20px
+    min-height 22px
+  &.ka-group-icon-col
+    margin-right 2px
+.ka-group-icon
+.ka-roles-icon
+.ka-no-group-icon
+  float left
+  width 20px
+.ka-roles-icon-only
+.ka-roles-icon
+  font-size 1.5em
+  color main-color
+.ka-no-group-chip
+  padding 0 6px;
+  line-height 30px
+.ka-no-group-icon
+  background-color main-color
+  text-align center
+  color grey-2
+  padding 0
+  margin-right 2px
+  cursor default
+  &.ka-small
+    width 20px
+    height 20px
+    line-height 20px
+    border-radius 10px
+    font-size 11px
+  &.ka-medium
+    width 30px
+    height 30px
+    border-radius 15px
+    line-height 30px
+  &.ka-large
+    width 50px
+    height 50px
+    border-radius 25px
+    line-height 50px
+    font-size 20px
+.ka-no-updates
+.ka-task-accepted
+  background-color yellow-1
+.ka-task-accepted
+  background-color lightness(main-green, 97%)
+.ka-task-denied
+  background-color lightness(main-yellow, 97%)
+.ka-task-error
+  background-color lightness(main-red, 97%)
+.ka-filters
+.ka-selected
+.ka-actions
+  font-size 80% !important
+  padding 0.5em 1em
+  border-radius 5px
+.ka-filters
+  background-color lightness(main-color, 95%)
+  transition background-color 1s
+  &.ka-filtered
+    background-color lightness(main-color, 85%)
+.ka-filter-info
+  color grey-8
+  margin 1em 0 0
+.ka-selected-info
+  color grey-8
+  div
+    padding-right 10px
+  span
+    font-size 1.5em
+    font-weight bold
+  .disabled
+    color grey-5
+.ka-actions
+  background-color main-green
+  .ka-actions-row
+    padding-left 0
+  .ka-action-button
+    margin-left 0
+    margin-right 10px
+  .ka-action-desc
+    width 100px
+    text-align center
+    align-self center
+    color grey-7
+.ka-field-title
+  margin-top 1em
+  color grey-8
+.ka-nosend-advice
+.ka-dialog-title
+  font-weight 300
+  em
+    color main-red
+    font-style normal
+// patch for no scrollbar on textarea
+.ka-dialog
+  .q-textarea.q-field--dense textarea
+    overflow hidden
+  input[type=number]::-webkit-inner-spin-button
+  input[type=number]::-webkit-outer-spin-button
+    -webkit-appearance none
+    margin 0
+.ka-dialog-title
+  color main-color
+  font-weight 300
+  font-size 1.9em
+.ka-dialog-title-separator
+  background lightness(main-color, 85%)
+  margin-bottom 1.5em
+
+@keyframes spin
+  100%
+    transform: rotate(360deg)
+
+.doc-note 
+  font-size: 16px;  
+  margin: 16px 0;
+  padding: 16px;
+  border-top: 2px solid;
+.doc-note__title 
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .7px;
+  padding-bottom: 15px;  
+.doc-note--warning 
+  background-color #fdf6e1;
+  border-color #a77d0b !important;
+  font-size: 16px;
+  font-weight: bold;
+  color: @border-color;
+  .doc-note__title 
+    color: @border-color;
+  .kh-banner-link  
+    border-bottom: 1px dotted @border-color;
+    color: @border-color;
+    transition: @border-color .28s ease-in-out;
+.doc-note--success
+  font-size: 16px;   
+  background-color: #daf8e1;
+  border-color: #147029;
+  font-weight: bold;
+  color: @border-color;
+  .doc-note__title
+    color: @border-color;
+  .kh-banner-link  
+    border-bottom: 1px dotted @border-color;
+    color: @border-color;
+    transition: @border-color .28s ease-in-out;  
+.doc-note--danger 
+  font-size: 16px;  
+  background-color: #ffdfe3;
+  border-color: #c10015;
+  color: @border-color;
+  font-weight: bold;
+  .doc-note__title 
+    color: @border-color;
+  .kh-banner-link  
+    border-bottom: 1px dotted @border-color;
+    color: @border-color;
+    transition: @border-color .28s ease-in-out;
+.doc-note--info
+  font-size: 16px;
+  background-color: #d1ecf1;
+  border-color: #0c5460;
+  font-weight: bold;
+  color: @border-color;
+  .doc-note__title
+    color: @border-color;
+  .kh-banner-link  
+    border-bottom: 1px dotted @border-color;
+    color: @border-color;
+    transition: @border-color .28s ease-in-out;
+.q-notification {
+  width 290px;  
+}

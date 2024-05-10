@@ -1,22 +1,22 @@
 /* 
   Define the Quasar app using UMD version
   see https://quasar.dev/start/umd/#quasar-config-object
-*/ 
+*/
 
 // Override locale
 const appLocale = Quasar.lang.getLocale().substring(0, 2)
 const kcLocale = Quasar.Cookies.get('KEYCLOAK_LOCALE')
-if (appLocale !== kcLocale) {
+if (appLocale !== kcLocale) {
   Quasar.Cookies.set('KEYCLOAK_LOCALE', appLocale)
   location.reload()
 }
 
 // Create the Vue app
 const app = Vue.createApp({
-  setup () {
+  setup() {
     // Functions
-    async function popup (title, file) {
-     const content = await fetch(file)
+    async function popup(title, file) {
+      const content = await fetch(file)
       Quasar.Dialog.create({
         title,
         message: await content.text(),
@@ -27,10 +27,22 @@ const app = Vue.createApp({
         }
       })
     }
+    async function notify(type, message) {
+      let typeNotify = type;
+      if (type === 'success') {
+        typeNotify = 'positive'
+      } else if (type === 'error') {
+        typeNotify = 'negative'
+      }
+      Quasar.Notify.create({
+        message: message,
+        type: typeNotify
+      })
+    }
     // Expose 
     return {
       email: Vue.ref(''),
-      password: Vue.ref(''),  
+      password: Vue.ref(''),
       rememberMe: Vue.ref('off'),
       loginLoading: Vue.ref(false),
       resetPasswordLoading: Vue.ref(false),
@@ -40,7 +52,8 @@ const app = Vue.createApp({
       showPassword: Vue.ref(false),
       showPasswordNew: Vue.ref(false),
       showPasswordConfirm: Vue.ref(false),
-      popup
+      popup,
+      notify
     }
   }
 })

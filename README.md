@@ -29,3 +29,19 @@ The _Admin console_ http://localhost:8078/admin/
 * While creating custom themes, especially when overriding templates, it may be useful to use the built-in templates as
   a reference. These can be found within the theme directory of `../lib/lib/main/org.keycloak.keycloak-themes-24.0.3.jar`, which can be opened using any
   standard ZIP archive tool.
+
+### Stylus css
+
+To use stylus:
+
+```
+$ npm install stylus -g
+```
+
+To convert stylus file to css:
+
+  ```
+  stylus -w file.styl
+  ```
+
+

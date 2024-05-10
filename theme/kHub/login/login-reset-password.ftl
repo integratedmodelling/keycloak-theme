@@ -5,34 +5,37 @@
   -->
   <#if section = "form">
     <!-- Title -->
-    <div 
-      class="text-center column items-center"
-      :class="{ 'q-pa-xs q-gutter-sm': $q.screen.xs, 'q-pa-sm q-gutter-md': $q.screen.gt.xs }"
-    >
-      <div class="text-subtitle1">${msg("emailForgotTitle")}</div>
-      <div>${msg("emailInstruction")}</div>
+    <div class="au-top-text">
+      <span class="au-top-content">
+        Insert your email address
+      </span>
+      <div class="au-top-info">
+        <span >We'll send you a message to help you reset your password</span>
+      </div>
     </div>
     <!-- Content  -->
-    <q-form action="${url.loginAction}" method="post" class="full-width">
-      <div class="q-py-xs column">
-        <q-input id="username" name="username" v-model="email" filled type="text" 
-          label="${msg('email')}"
-          :error="<#if messagesPerField.existsError('username')>true<#else>false</#if>"
-          error-message="${kcSanitize(messagesPerField.getFirstError('username'))?no_esc}" 
-          :hide-bottom-space="true"
-        />
+
+    <q-form action="${url.loginAction}" method="post" class="au-form-container" >
+      <div class="k-input-login-style">
+        <div class="q-pb-md column">
+          <q-input id="username" name="username" v-model="email" type="text" color="k-main"
+            label="${msg('email')}"
+            :error="<#if messagesPerField.existsError('username')>true<#else>false</#if>"
+            error-message="${kcSanitize(messagesPerField.getFirstError('username'))?no_esc}" 
+            :hide-bottom-space="true">
+            <template v-slot:prepend>
+              <q-icon name="email"></q-icon>
+            </template>
+          </q-input>
+        </div>
       </div>
       <!-- Actions -->
-      <div class="q-py-xs column items-center">
-        <!-- Submit actions -->
-        <div :class="{ 'q-pa-sm': $q.screen.xs, 'q-pa-md': $q.screen.gt.xs }">
-          <q-btn label="${msg('doSubmit')}" color="primary" :loading="resetPasswordLoading" type="submit" @click="resetPasswordLoading = true" />
-        </div>
-        <!-- back to login actions -->
-        <div>
-          <q-btn label="${kcSanitize(msg('backToLogin'))?no_esc}" color="accent" flat rounded no-caps href="${url.loginUrl}" />
-        </div>
+      <div class="au-btn-container">
+          <q-btn label="${msg('btnResetPassword')}" color="k-main" class="full-width" :loading="resetPasswordLoading" type="submit" @click="resetPasswordLoading = true" unelevated/>
       </div>
-    </q-form>
+      <div class="au-btn-container au-bottom-links full-width items-end">
+        <q-btn class="kh-link" label="${kcSanitize(msg('backToLogin'))?no_esc}" flat no-caps href="${url.loginUrl}" />        
+      </div>
+  </q-form>
   </#if>
 </@layout.registrationLayout>

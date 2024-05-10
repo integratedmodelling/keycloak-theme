@@ -1,3 +1,4 @@
+  color lightness(main-color, 90%)
 //app global constants
 main-color = rgb(96,125,139)
 main-jj = rgb(96,125,139, 0.2)
@@ -124,6 +125,9 @@ body
   text-decoration none
   color #0277bd
   cursor pointer
+  font-weight normal
+  .q-focus-helper
+    display none
   &:visited
     color cyan-9
   &:not(.disabled):hover::after
@@ -282,3 +286,65 @@ body
 @keyframes spin
   100%
     transform: rotate(360deg)
+
+.doc-note 
+  font-size: 16px;  
+  margin: 16px 0;
+  padding: 16px;
+  border-top: 2px solid;
+.doc-note__title 
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .7px;
+  padding-bottom: 15px;  
+.doc-note--warning 
+  background-color #fdf6e1;
+  border-color #a77d0b !important;
+  font-size: 16px;
+  font-weight: bold;
+  color: @border-color;
+  .doc-note__title 
+    color: @border-color;
+  .kh-banner-link  
+    border-bottom: 1px dotted @border-color;
+    color: @border-color;
+    transition: @border-color .28s ease-in-out;
+.doc-note--success
+  font-size: 16px;   
+  background-color: #daf8e1;
+  border-color: #147029;
+  font-weight: bold;
+  color: @border-color;
+  .doc-note__title
+    color: @border-color;
+  .kh-banner-link  
+    border-bottom: 1px dotted @border-color;
+    color: @border-color;
+    transition: @border-color .28s ease-in-out;  
+.doc-note--danger 
+  font-size: 16px;  
+  background-color: #ffdfe3;
+  border-color: #c10015;
+  color: @border-color;
+  font-weight: bold;
+  .doc-note__title 
+    color: @border-color;
+  .kh-banner-link  
+    border-bottom: 1px dotted @border-color;
+    color: @border-color;
+    transition: @border-color .28s ease-in-out;
+.doc-note--info
+  font-size: 16px;
+  background-color: #d1ecf1;
+  border-color: #0c5460;
+  font-weight: bold;
+  color: @border-color;
+  .doc-note__title
+    color: @border-color;
+  .kh-banner-link  
+    border-bottom: 1px dotted @border-color;
+    color: @border-color;
+    transition: @border-color .28s ease-in-out;
+.q-notification {
+  width 290px;  
+}

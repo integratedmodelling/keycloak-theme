@@ -6,11 +6,10 @@
     -->
     <#if section = "form">
       <!-- Title -->
-      <div 
-        class="text-subtitle1 text-center"
-        :class="{ 'q-pa-xs': $q.screen.xs, 'q-pa-sm': $q.screen.gt.xs }"
-      >
-          ${msg("updatePasswordTitle")}
+      <div class="au-top-text">
+        <span class="au-top-content">
+          <p>Insert your email address</p>
+        </span>
       </div>
       <!-- Content -->
       <div class="full-width">

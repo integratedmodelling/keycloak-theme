@@ -27,6 +27,18 @@ const app = Vue.createApp({
         }
       })
     }
+    async function notify(type, message) {
+      let typeNotify = type;
+      if (type === 'success') {
+        typeNotify = 'positive'
+      } else if (type === 'error') {
+        typeNotify = 'negative'
+      }
+      Quasar.Notify.create({
+        message: message,
+        type: typeNotify
+      })
+    }
     // Expose 
     return {
       email: Vue.ref(''),
@@ -40,7 +52,8 @@ const app = Vue.createApp({
       showPassword: Vue.ref(false),
       showPasswordNew: Vue.ref(false),
       showPasswordConfirm: Vue.ref(false),
-      popup
+      popup,
+      notify
     }
   }
 })

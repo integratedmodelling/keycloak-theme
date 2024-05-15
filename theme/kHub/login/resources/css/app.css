@@ -356,7 +356,7 @@ body .kh-layout-page ul li {
 .doc-note--warning .kh-banner-link {
   border-bottom: 1px dotted #a77d0b !important;
   color: #a77d0b !important;
-  transition: #a77d0b 0.28s ease-in-out !important ;
+  transition: #a77d0b !important 0.28s ease-in-out;
 }
 .doc-note--success {
   font-size: 16px;

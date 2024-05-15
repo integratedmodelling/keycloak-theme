@@ -406,6 +406,12 @@ body .kh-layout-page ul li {
 .q-notification {
   width: 290px;
 }
+.kh-checkbox {
+  accent-color: #607d8b;
+}
+.kh-checkbox-label {
+  color: #424242;
+}
 @-moz-keyframes spin {
   100% {
     transform: rotate(360deg);

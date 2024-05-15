@@ -47,6 +47,21 @@
               </q-input>
             </div>            
           </div>
+          <!-- Submit actions -->
+          <div 
+            class="au-btn-container"                    
+          >
+            <q-btn 
+            id="login" 
+            name="login" 
+            label="${msg('doLogin')}" 
+            color="k-main"  
+            :loading="loginLoading" 
+            @click="loginLoading = true" 
+            type="submit" 
+            class="full-width" 
+            unelevated/>
+          </div>
           <!-- Options -->
           <div class="row justify-between items-center no-wrap">
             <#if realm.resetPasswordAllowed>

@@ -8,6 +8,8 @@
     <link href="${url.resourcesPath}/css/style.css" rel="stylesheet" type="text/css">
     <link href="${url.resourcesPath}/css/app.css" rel="stylesheet" type="text/css">
     <link href="${url.resourcesPath}/css/font.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="${url.resourcesPath}/img/favicon.ico"/>
+
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="robots" content="noindex, nofollow">

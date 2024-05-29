@@ -1,0 +1,240 @@
+:root {
+    --ct-color-host-accent: #FFA601 !important;
+    --ct-color-list-hover-text: #FFA601 !important;      
+    
+    /* Theme color */
+    --pf-global--primary-color--100: rgb(96,125,139) !important;
+    --pf-global--primary-color--200: rgb(96,125,139) !important;
+    --pf-global--secondary-color: #26a69a;
+    --pf-global--warning-color--100: #F2C037 !important;
+    --pf-global--warning-color--200: #F2C037 !important;
+    --pf-global--warning-color--200: #F2C037 !important;
+
+    --pf-global--main-color: rgb(96,125,139);
+
+    --pf-global--text-color: #424242;
+    --pf-global--text-secondary-color: #757575;
+
+    /*  Link colors */
+    --pf-global--link--Color: rgb(96,125,139) !important;
+    /* --pf-global--link--Color: rgb(96,125,139) !important; */
+    --pf-global--link--Color--hover: rgb(96,125,139) !important;
+
+    /*  Inline link colors */
+    --pf-c-button--m-link--Color: #FFA601 !important;
+    --pf-c-button--m-link--m-inline--hover--Color: #fdc55d !important;
+
+    /*  Nav link colors */
+    --pf-c-badge--m-unread--BackgroundColor: #FFA601 !important;
+    --pf-c-nav__link--Color: #FFA601 !important;
+    --pf-c-nav__link--m-current--Color: #fdc55d !important;
+    --pf-c-nav__link--before--BorderColor: #FFA601 !important;
+    --pf-c-nav__section__link--hover--after--BorderColor: #fdc55d !important;
+
+    /*  Progress indicators colors */
+    --pf-c-progress__indicator--BackgroundColor: #FFA601 !important;
+    --pf-c-progress__bar--BackgroundColor: #fadda7 !important;
+
+    /*  Table headings colors */
+    --pf-c-table__sort__button__text--Color: #FFA601 !important;
+
+    /* Sidebar */
+    --pf-c-page__sidebar--BackgroundColor: white !important;
+    --pf-c-page__header--BackgroundColor: white !important;
+}
+
+body h1 {
+    font-size: 1.7em;
+    line-height: 1.7em;
+    margin-top: 1.4em;
+    margin-block-end: 1.2em;
+  }
+  body .kh-layout-page h2 {
+    font-size: 1.6em;
+    line-height: 1.6em;
+    margin-block-start: 1.3em;
+    margin-block-end: 1.1em;
+  }
+  body .kh-layout-page h3 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-block-start: 1.2em;
+    margin-block-end: 1em;
+    font-weight: 300;
+  }
+  body .kh-layout-page h4 {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    margin-block-start: 1.1em;
+    margin-block-end: 0.9em;
+    font-weight: 300;
+  }
+
+.pf-c-page__header,.pf-c-page__sidebar {
+    background-color: white;    
+}
+
+h1{
+    font-size: 1.3em !important;
+    line-height: 1.3em !important;
+    margin-block-start: 1.2em !important;
+    margin-block-end: 1em !important;
+    font-weight: 300 !important;    
+  }
+
+*:focus {
+    outline: none;
+}
+*:required {
+    color: var(--pf-global--text-color);
+  }
+
+
+    .pf-c-nav__link.pf-m-current:after, 
+    .pf-c-nav__link.pf-m-current:hover:after, 
+    .pf-c-nav__item.pf-m-current:not(.pf-m-expanded) 
+    .pf-c-nav__link:after {
+        border:0px;
+    }
+
+    .pf-c-nav__link:hover:after, .pf-c-nav__link.pf-m-hover:after {
+        border:0px;
+    }
+
+    .pf-c-nav__toggle{
+        margin-left: inherit !important; 
+        font-size: 14px;
+    } 
+
+    .pf-c-dropdown__toggle.pf-m-plain{
+        color:var(--pf-global--text-color)!important;
+    }
+
+.pf-c-page__header {
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+.pf-c-page__sidebar {
+    border: 1px solid rgba(0,0,0,0.12);
+    border-top:0px;
+    width: auto;
+}   
+.pf-c-page__sidebar-body {
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+.pf-c-page {
+    --pf-c-page__sidebar-body--Border: 1px solid var(--ct-color-host-accent);
+}
+
+.pf-c-page__main-section {
+    padding: 40px 80px 0 !important;
+}
+
+/* Form control */
+
+.pf-c-form-control {
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.24);
+}
+
+.pf-c-form-control:focus {
+    border-bottom-color: var(--pf-global--main-color);
+}
+
+
+.pf-c-form-control:required {
+    color: var(--pf-global--text-color);
+}
+.pf-c-form__label-text {
+    color: var(--pf-global--text-secondary-color) !important;
+    font-weight: normal;
+}
+
+.pf-c-form-control[readonly] {
+    background-color: transparent;
+    color:rgba(0,0,0,0.54);
+}
+
+
+.pf-c-form-control {
+    --pf-c-form__label-required--Color: var(--pf-global--text-color) !important;
+}
+
+.pf-c-form-control:focus {
+    --pf-c-form-control--BorderBottomColor: var(--pf-global--primary-color--100);
+}
+
+/* Button */
+
+.pf-c-button.pf-m-secondary {
+    --pf-c-button--m-secondary--Color: var(--pf-global--secondary-color);
+    --pf-c-button--after--BorderColor: var(--pf-global--secondary-color);
+    --pf-c-button--m-secondary--hover--after--BorderColor: var(--pf-global--secondary-color);
+    --pf-c-button--m-secondary--hover--Color: var(--pf-global--secondary-color);
+}
+
+.pf-c-button.pf-m-link {
+    color:  var(--pf-global--main-color);
+} 
+
+
+
+
+.pf-c-nav {
+
+    --pf-c-nav__link--Color: #424242;
+    --pf-c-nav__link--FontSize: 14px;
+    --pf-c-nav__link--after--Border: 0px !important;
+
+    --pf-c-nav__link--before--BorderColor: white;
+    --pf-c-nav__item--before--BorderColor: white;
+
+    --pf-c-nav__link--m-current--BackgroundColor: white;
+    --pf-c-nav__link--m-current--Color: #42424299;
+    --pf-c-nav__link--m-current--after--Border: 0px !important;
+
+    --pf-c-nav__link--hover--BackgroundColor: white;
+    --pf-c-nav__link--hover--Color: #42424299;
+
+    --pf-c-nav__link--focus--BackgroundColor:white;
+    --pf-c-nav__link--focus--Color: #424242;
+
+    --pf-c-nav__link--active--BackgroundColor:white;
+    --pf-c-nav__link--active--Color: #424242;
+
+    --pf-c-nav--Transition: var(--pf-global--Transition);
+    --pf-c-nav--m-light__item--before--BorderColor: var(--pf-global--BorderColor--300);
+
+    
+}
+
+
+
+
+
+
+
+/* 
+h1 {
+    .pf-c-title {
+    font-size: 1.3em !important;
+    line-height: 1.3em !important;
+    margin-top: 1.4em;
+    margin-block-end: 1.2em;
+    }
+  }
+  h2 {
+    font-size: 1.6em;
+    line-height: 1.6em;
+    margin-block-start: 1.3em;
+    margin-block-end: 1.1em;
+  }
+  
+  h4 {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    margin-block-start: 1.1em;
+    margin-block-end: 0.9em;
+    font-weight: 300;
+  }
+   */

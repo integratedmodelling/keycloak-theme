@@ -48,11 +48,15 @@
           </div>
           
           <!-- Submit actions -->
-          <div class="au-btn-container row justify-center">
+          <div class="au-btn-container row justify-center ">
             <#if isAppInitiatedAction??>
-                <q-btn label="${msg('doCancel')}" type="submit" color="accent" outline value="true" />
-                <div class="col-1" />
-                <q-btn name="cancel-aia" label="${msg('doSubmit')}" type="submit" color="accent" :loading="updatedPasswordLoading" @click="updatedPasswordLoading = true" />
+              <div class="row q-gutter-md">
+                <div>
+                  <q-btn label="${msg('doCancel')}" type="submit" color="k-main" outline value="true" />
+                </div>
+                <div>
+                  <q-btn name="cancel-aia" label="${msg('doSubmit')}" type="submit" color="k-main" :loading="updatedPasswordLoading" @click="updatedPasswordLoading = true" />
+                </div>
               </div>
             <#else>
               <q-btn label="${msg('doApply')}" type="submit" color="k-main" unelevated :loading="updatedPasswordLoading" @click="updatedPasswordLoading = true" />

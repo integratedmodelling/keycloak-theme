@@ -1,6 +1,6 @@
 :root {
-    --ct-color-host-accent: #FFA601 !important;
-    --ct-color-list-hover-text: #FFA601 !important;      
+    --ct-color-host-accent: rgb(96,125,139) !important;
+    --ct-color-list-hover-text: rgb(96,125,139) !important;      
     
     /* Theme color */
     --pf-global--primary-color--100: rgb(96,125,139) !important;
@@ -15,60 +15,35 @@
     --pf-global--text-color: #424242;
     --pf-global--text-secondary-color: #757575;
 
+    --pf-global--borderColor: rgba(0,0,0,0.12);
+
     /*  Link colors */
     --pf-global--link--Color: rgb(96,125,139) !important;
     /* --pf-global--link--Color: rgb(96,125,139) !important; */
     --pf-global--link--Color--hover: rgb(96,125,139) !important;
 
     /*  Inline link colors */
-    --pf-c-button--m-link--Color: #FFA601 !important;
-    --pf-c-button--m-link--m-inline--hover--Color: #fdc55d !important;
+    --pf-c-button--m-link--Color: rgb(96,125,139) !important;
+    --pf-c-button--m-link--m-inline--hover--Color: #26a69a !important;
 
     /*  Nav link colors */
-    --pf-c-badge--m-unread--BackgroundColor: #FFA601 !important;
-    --pf-c-nav__link--Color: #FFA601 !important;
-    --pf-c-nav__link--m-current--Color: #fdc55d !important;
-    --pf-c-nav__link--before--BorderColor: #FFA601 !important;
-    --pf-c-nav__section__link--hover--after--BorderColor: #fdc55d !important;
+    --pf-c-badge--m-unread--BackgroundColor: rgb(96,125,139) !important;
+    --pf-c-nav__link--Color: rgb(96,125,139) !important;
+    --pf-c-nav__link--m-current--Color: #26a69a !important;
+    --pf-c-nav__link--before--BorderColor: rgb(96,125,139) !important;
+    --pf-c-nav__section__link--hover--after--BorderColor: #26a69a !important;
 
     /*  Progress indicators colors */
-    --pf-c-progress__indicator--BackgroundColor: #FFA601 !important;
-    --pf-c-progress__bar--BackgroundColor: #fadda7 !important;
+    --pf-c-progress__indicator--BackgroundColor: rgb(96,125,139) !important;
+    --pf-c-progress__bar--BackgroundColor: #26a69a !important;
 
     /*  Table headings colors */
-    --pf-c-table__sort__button__text--Color: #FFA601 !important;
+    --pf-c-table__sort__button__text--Color: rgb(96,125,139) !important;
 
     /* Sidebar */
     --pf-c-page__sidebar--BackgroundColor: white !important;
     --pf-c-page__header--BackgroundColor: white !important;
 }
-
-body h1 {
-    font-size: 1.7em;
-    line-height: 1.7em;
-    margin-top: 1.4em;
-    margin-block-end: 1.2em;
-  }
-  body .kh-layout-page h2 {
-    font-size: 1.6em;
-    line-height: 1.6em;
-    margin-block-start: 1.3em;
-    margin-block-end: 1.1em;
-  }
-  body .kh-layout-page h3 {
-    font-size: 1.5em;
-    line-height: 1.5em;
-    margin-block-start: 1.2em;
-    margin-block-end: 1em;
-    font-weight: 300;
-  }
-  body .kh-layout-page h4 {
-    font-size: 1.4em;
-    line-height: 1.4em;
-    margin-block-start: 1.1em;
-    margin-block-end: 0.9em;
-    font-weight: 300;
-  }
 
 .pf-c-page__header,.pf-c-page__sidebar {
     background-color: white;    
@@ -82,6 +57,10 @@ h1{
     font-weight: 300 !important;    
   }
 
+a {
+    color: var(--pf-global--main-color)
+  }
+
 *:focus {
     outline: none;
 }
@@ -89,37 +68,42 @@ h1{
     color: var(--pf-global--text-color);
   }
 
+/* Sidebar realm select */
+.keycloak__realm_selector_dropdown__toggle{
+    --pf-c-dropdown__toggle--BackgroundColor: white;
+    --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-c-dropdown__toggle--before--BorderTopColor)    
+}
 
-    .pf-c-nav__link.pf-m-current:after, 
-    .pf-c-nav__link.pf-m-current:hover:after, 
-    .pf-c-nav__item.pf-m-current:not(.pf-m-expanded) 
-    .pf-c-nav__link:after {
-        border:0px;
-    }
+.keycloak__realm_selector_dropdown__toggle .pf-c-dropdown__toggle-text{
+    color: var(--pf-global--text-color) !important;
+}
 
-    .pf-c-nav__link:hover:after, .pf-c-nav__link.pf-m-hover:after {
-        border:0px;
-    }
+.pf-c-divider:after {
+    background-color: var(--pf-global--borderColor)
+}
 
-    .pf-c-nav__toggle{
-        margin-left: inherit !important; 
-        font-size: 14px;
-    } 
+.pf-c-dropdown__menu-item {
+    font-size: 14px;
+}
 
-    .pf-c-dropdown__toggle.pf-m-plain{
-        color:var(--pf-global--text-color)!important;
-    }
+.pf-c-dropdown__toggle, .pf-c-select__toggle {
+    height: 2.25em;
+}
+
+.pf-c-dropdown__toggle.pf-m-plain{
+    color:var(--pf-global--text-color)!important;
+}
 
 .pf-c-page__header {
-    border-bottom: 1px solid rgba(0,0,0,0.12);
+    border-bottom: 1px solid var(--pf-global--borderColor);
 }
 .pf-c-page__sidebar {
-    border: 1px solid rgba(0,0,0,0.12);
+    border: 1px solid var(--pf-global--borderColor);
     border-top:0px;
     width: auto;
 }   
 .pf-c-page__sidebar-body {
-    border-bottom: 1px solid rgba(0,0,0,0.12);
+    border-bottom: 1px solid var(--pf-global--borderColor);
 }
 .pf-c-page {
     --pf-c-page__sidebar-body--Border: 1px solid var(--ct-color-host-accent);
@@ -175,15 +159,58 @@ h1{
 
 .pf-c-button.pf-m-link {
     color:  var(--pf-global--main-color);
+    font-size: 14px;
 } 
 
+.pf-c-button.pf-m-primary {
+    font-size:14px;
+}
+
+/* Select */
+.pf-c-select__toggle:hover {
+    --pf-c-select__toggle--before--BorderBottomColor: var(--pf-global--main-color) !important;
+}
+
+ .pf-c-select__toggle:before {
+    border: 1px solid var(--pf-global--borderColor);
+} 
+
+.pf-c-select__menu-item {
+    font-size: 14px;
+}
+
+/* Text input */
+.pf-c-text-input-group__text:focus-within {
+    border-bottom-color: var(--pf-global--main-color) !important;
+}
+
+.pf-c-text-input-group__text:focus-within {    
+    --pf-c-text-input-group__text--after--BorderBottomColor: var(--pf-global--main-color);
+}
+
+/* .pf-c-select__toggle:focus, .pf-c-select__toggle:focus-within {
+    --pf-c-select__toggle--before--BorderBottomColor: var(--pf-global--main-color);
+} */
 
 
+/* pf-c-nav */
+.pf-c-nav__link {
+    font-size: 14px;
+}
+
+.pf-c-nav__section-title {
+    color: #424242;
+    font-weight: 300;
+}
+
+.pf-c-nav__section-title {
+    border-bottom-color: var(--pf-global--borderColor);
+}
 
 .pf-c-nav {
 
     --pf-c-nav__link--Color: #424242;
-    --pf-c-nav__link--FontSize: 14px;
+    --pf-c-nav__link--FontSize: 14px !important;
     --pf-c-nav__link--after--Border: 0px !important;
 
     --pf-c-nav__link--before--BorderColor: white;
@@ -208,6 +235,33 @@ h1{
     
 }
 
-.pf-c-select__toggle:hover {
-    --pf-c-select__toggle--before--BorderBottomColor: var(--pf-global--main-color);
+.pf-c-nav__link.pf-m-current:after, 
+.pf-c-nav__link.pf-m-current:hover:after, 
+.pf-c-nav__item.pf-m-current:not(.pf-m-expanded) 
+.pf-c-nav__link:after {
+    border:0px;
+}
+.pf-c-nav__link:hover:after, .pf-c-nav__link.pf-m-hover:after {
+    border:0px;
+}
+.pf-c-nav__toggle{
+    margin-left: inherit !important; 
+    font-size: 14px;
+} 
+
+
+.pf-c-switch__input:checked~.pf-c-switch__toggle {
+    background-color: var(--pf-global--main-color);
+}
+
+.pf-c-dropdown__toggle .pf-c-dropdown__toggle-text {
+    color:white;
+}
+
+.pf-c-dropdown__toggle .pf-c-dropdown__toggle-icon {
+    color:white !important;
+}
+
+.pf-c-dropdown__toggle.pf-m-primary {
+    margin-bottom: 1em;
 }

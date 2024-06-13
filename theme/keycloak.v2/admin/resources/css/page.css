@@ -90,6 +90,10 @@ a {
     height: 2.25em;
 }
 
+.pf-c-dropdown__toggle-text {
+    color: var(--pf-global--text-color) !important;
+}
+
 .pf-c-dropdown__toggle.pf-m-plain{
     color:var(--pf-global--text-color)!important;
 }

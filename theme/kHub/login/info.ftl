@@ -31,11 +31,11 @@
           <div class="au-top-info" style="text-align:center !important">
             <span>${messageSummary}</span>
           </div>
-          <div>
+          <#--  <div>
             <q-btn  color="k-main" label="${msg('doLogin')}" class="full-width" href="${url.loginRestartFlowUrl}"
               unelevated>
             </q-btn>
-          </div>
+          </div>  -->
         </div>
       </div>
     <#elseif messageSummary?starts_with(emailVerifiedAlreadyMessage)>
@@ -77,19 +77,16 @@
       <#else>
         <div class="au-btn-container q-pb-xl">
           <#if pageRedirectUri?has_content>
-              <#--  <p><a href="${pageRedirectUri}">${kcSanitize(msg("backToApplication"))?no_esc}</a></p>  -->
               <#assign backToApplication = msg('backToApplication')?replace('&raquo;','')?replace('&laquo;','')>
                <q-btn 
                   id="backToApplication" 
                   name="backToApplication" 
                   label="${backToApplication}" 
                   color="k-main"  
-                  @href="${pageRedirectUri}" 
+                  href="${pageRedirectUri}" 
                   class="full-width" 
                   unelevated/>
           <#elseif actionUri?has_content>
-              <#--  <p><a href="${actionUri}">${kcSanitize(msg("proceedWithAction"))?no_esc}</a></p>
-              ${kcSanitize(msg("proceedWithAction"))?no_esc}  -->
               <#assign proceedWithAction = msg('proceedWithAction')?replace('&raquo;','')?replace('&laquo;','')>
               <q-btn 
                   id="proceedWithAction" 
@@ -106,7 +103,7 @@
                   name="backToApplication" 
                   label="${backToApplication}" 
                   color="k-main"  
-                  @href="${client.baseUrl}" 
+                  href="${client.baseUrl}" 
                   class="full-width" 
                   unelevated/>
           </#if>

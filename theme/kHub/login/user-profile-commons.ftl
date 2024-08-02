@@ -40,7 +40,7 @@
 				<label for="${attribute.name}" class="${properties.kcLabelClass!} label-sign-up">${advancedMsg(attribute.displayName!'')}</label>
 				<#if attribute.required><span class=required-sign-up> * </span></#if>
 			</div>
-			<div class="${properties.kcInputWrapperClass!}">
+			<div class="${properties.kcInputWrapperClass!} hola">
 				<#if attribute.annotations.inputHelperTextBefore??>
 					<div class="${properties.kcInputHelperTextBeforeClass!}" id="form-help-text-before-${attribute.name}" aria-live="polite">${kcSanitize(advancedMsg(attribute.annotations.inputHelperTextBefore))?no_esc}</div>
 				</#if>

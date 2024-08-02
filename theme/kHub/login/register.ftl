@@ -88,15 +88,25 @@
                 </div>
             </#if>
 
-            <div class="${properties.kcFormGroupClass!}">
-                <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
-                    <div class="${properties.kcFormOptionsWrapperClass!}">
-                        <span><a href="${url.loginUrl}">${kcSanitize(msg("backToLogin"))?no_esc}</a></span>
+            <div class="${properties.kcFormGroupClass!} ">
+                <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!} q-pt-md">                    
+                    <q-btn 
+                      id="register" 
+                      name="register" 
+                      label="${msg('doRegister')}" 
+                      color="k-main"                                              
+                      type="submit" 
+                      class="full-width" 
+                      unelevated/>
                     </div>
                 </div>
-
-                <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
-                    <input class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doRegister")}"/>
+                <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
+                    <div class="${properties.kcFormOptionsWrapperClass!}">
+                        <span class="label-sign-up">
+                            ${msg('alreadySignUp')}
+                        </span>
+                        <q-btn class="kh-link" id="register" label="${msg('backToLogin')}" flat no-caps href="${url.loginUrl}" style="{'margin-top':'-1px'}" />
+                    </div>
                 </div>
             </div>
         </form>

@@ -73,7 +73,7 @@ height: 2.5em;
 border: none;
 border: 1px solid var(--pf-global--borderColor);
 margin-top: 0.5em;
-margin-bottom: 1em;
+/* margin-bottom: 1em; */
 border-radius: 2px;
 
     &:hover {
@@ -128,6 +128,17 @@ border-radius: 2px;
     cursor: pointer; /* Mouse pointer on hover */
     height: 2.5em;
     margin-top: 0.5em;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 }
 
+.input-sign-up-error{
+    color: red;
+    font-size: 12px;
+}
+.input-sign-up-error-wrapper {
+    margin-bottom:1em;
+    text-align: left;
+}
+.link-sign-up-wrapper {
+    
+}

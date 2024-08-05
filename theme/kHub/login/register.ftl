@@ -6,20 +6,11 @@
         ${msg("registerTitle")}
     <#elseif section = "form">
         <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
-            <div class="au-top-text">
-                <span class="au-top-content">
+            <div class="au-top-text" style="margin-bottom:1.5em">
+                <span class="au-top-content" >
                     Get started with <strong>k.LAB</strong>
                 </span>
             </div>
-            <div class="au-top-info" style="padding-bottom:0.5em">
-                <span>
-                    <ul>                        
-                        <li>Choose a user name that follows the <code>firstname.lastname</code> pattern using 6 or more characters</li>
-                        <li>Insert a valid email address to receive a confirmation link</li>
-                    </ul>
-                </span>
-            </div>
-
             <@userProfileCommons.userProfileFormFields; callback, attribute>
                 <#if callback = "afterField">
                 <#-- render password fields just under the username or email (if used as username) -->

@@ -72,7 +72,7 @@
 height: 2.5em;
 border: none;
 border: 1px solid var(--pf-global--borderColor);
-margin-top: 0.5em;
+margin-top: 0.2em;
 /* margin-bottom: 1em; */
 border-radius: 2px;
 
@@ -127,7 +127,7 @@ border-radius: 2px;
     /*font-size: 16px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
     height: 2.5em;
-    margin-top: 0.5em;
+    margin-top: 0.2em;
     /* margin-bottom: 1em; */
 }
 

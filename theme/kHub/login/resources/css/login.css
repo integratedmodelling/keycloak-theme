@@ -75,6 +75,7 @@ border: 1px solid var(--pf-global--borderColor);
 margin-top: 0.2em;
 /* margin-bottom: 1em; */
 border-radius: 2px;
+color:#424242;
 
     &:hover {
     border-bottom: 1px solid #424242;

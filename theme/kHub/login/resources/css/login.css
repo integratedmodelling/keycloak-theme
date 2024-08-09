@@ -1,0 +1,145 @@
+:root {
+    --ct-color-host-accent: rgb(96,125,139) !important;
+    --ct-color-list-hover-text: rgb(96,125,139) !important;      
+    
+    /* Theme color */
+    --pf-global--primary-color--100: rgb(96,125,139) !important;
+    --pf-global--primary-color--200: rgb(96,125,139) !important;
+    --pf-global--secondary-color: #26a69a;
+    --pf-global--background-button: rgba(0,0,0,0.05);
+    --pf-global--warning-color--100: #F2C037 !important;
+    --pf-global--warning-color--200: #F2C037 !important;
+    --pf-global--warning-color--200: #F2C037 !important;
+
+    --pf-global--main-color: rgb(96,125,139);
+
+    --pf-global--text-color: #424242;
+    --pf-global--text-secondary-color: #757575;
+
+    --pf-global--borderColor: rgba(0,0,0,0.12);
+
+    /*  Link colors */
+    --pf-global--link--Color: rgb(96,125,139) !important;
+    /* --pf-global--link--Color: rgb(96,125,139) !important; */
+    --pf-global--link--Color--hover: rgb(96,125,139) !important;
+
+    /*  Inline link colors */
+    --pf-c-button--m-link--Color: rgb(96,125,139) !important;
+    --pf-c-button--m-link--m-inline--hover--Color: #26a69a !important;
+
+    /*  Nav link colors */
+    --pf-c-badge--m-unread--BackgroundColor: rgb(96,125,139) !important;
+    --pf-c-nav__link--Color: rgb(96,125,139) !important;
+    --pf-c-nav__link--m-current--Color: #26a69a !important;
+    --pf-c-nav__link--before--BorderColor: rgb(96,125,139) !important;
+    --pf-c-nav__section__link--hover--after--BorderColor: #26a69a !important;
+
+    /*  Progress indicators colors */
+    --pf-c-progress__indicator--BackgroundColor: rgb(96,125,139) !important;
+    --pf-c-progress__bar--BackgroundColor: #26a69a !important;
+
+    /*  Table headings colors */
+    --pf-c-table__sort__button__text--Color: rgb(96,125,139) !important;
+
+    /* Sidebar */
+    --pf-c-page__sidebar--BackgroundColor: white !important;
+    --pf-c-page__header--BackgroundColor: white !important;
+}
+
+
+
+*:focus {
+    outline: none;
+}
+*:required {
+    color: red;
+  }
+
+.required-sign-up {
+    color:rgba(0,0,0,0.54);
+}
+
+.align-left{
+    text-align: left;
+}
+
+.label-sign-up {
+    color:rgba(0,0,0,0.54);
+    font-size: 14px;
+}
+
+.input-sign-up {
+height: 2.5em;
+border: none;
+border: 1px solid var(--pf-global--borderColor);
+margin-top: 0.2em;
+/* margin-bottom: 1em; */
+border-radius: 2px;
+color:#424242;
+
+    &:hover {
+    border-bottom: 1px solid #424242;
+    }   
+
+    &:active {
+    border-bottom: 2px solid rgb(96,125,139);
+    }
+
+    &:focus {
+    border-bottom: 2px solid rgb(96,125,139);
+    }
+
+    &:focus-visible {    
+    border-bottom: 2px solid rgb(96,125,139);    
+    }
+}
+
+.input-sign-up-full-width {
+    width: -webkit-fill-available;
+}
+
+.au-top-info {
+    color: var(--pf-global--main-color);
+    text-align: justify;
+    margin: 14px 0;
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li {
+        padding-left: 1.3em;
+        &:before {
+          content: '\e5ca';
+          font-family: 'Material Icons';
+          display: inline-block;
+          margin-left: -1.3em;
+          width: 1.3em;
+        }
+      }
+    }
+}
+
+.btn-password {
+    background-color: var(--pf-global--background-button); /* Blue background */
+    border: 1px solid var(--pf-global--borderColor); /* Remove borders */
+    border-left: none;
+    color:rgba(0,0,0,0.54); /* White text */
+    /*padding: 12px 16px; /* Some padding */
+    /*font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    height: 2.5em;
+    margin-top: 0.2em;
+    /* margin-bottom: 1em; */
+}
+
+.input-sign-up-error{
+    color: red;
+    font-size: 12px;
+}
+.input-sign-up-error-wrapper {
+    margin-bottom:1em;
+    text-align: left;
+}
+.link-sign-up-wrapper {
+    
+}

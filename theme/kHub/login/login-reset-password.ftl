@@ -7,10 +7,10 @@
     <!-- Title -->
     <div class="au-top-text">
       <span class="au-top-content">
-        Insert your email address
+        ${msg("emailForgotTitle")}
       </span>
       <div class="au-top-info">
-        <span >We'll send you a message to help you reset your password</span>
+        <span >${msg("emailForgotMessage")}</span>
       </div>
     </div>
     <!-- Content  -->

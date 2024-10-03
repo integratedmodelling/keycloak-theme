@@ -8,7 +8,7 @@
         <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
             <div class="au-top-text" style="margin-bottom:1em">
                 <span class="au-top-content" >
-                    Get started with <strong>k.LAB</strong>
+                    ${msg("registerKlabTitle")} <strong>k.LAB</strong>
                 </span>
             </div>
             <#--  <div class="au-top-info" style="padding-bottom:0.5em">

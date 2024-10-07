@@ -12,18 +12,28 @@
             </div>
             <div class="col">            
               ${kcSanitize(message.summary)?no_esc}
-            </div>
-            <div>
-              <#--  <q-btn flat :label="$t('labels.dismiss')" @click="closeConfirm ? open = true : dismissFunction"/>  -->
-              <#if skipLink??>
-              <#else>
-                  <#if client?? && client.baseUrl?has_content>
-                      <p><a id="backToApplication" href="${client.baseUrl}">${kcSanitize(msg("backToApplication"))?no_esc}</a></p>
-                  </#if>
-              </#if>
-            </div>
+            </div>            
           </div>
         </q-banner>
+        <div class="row items-center justify-center">
+          <#--  <q-btn flat :label="$t('labels.dismiss')" @click="closeConfirm ? open = true : dismissFunction"/>  -->
+          <#if skipLink??>
+          <#else>
+              <#if client?? && client.baseUrl?has_content>
+              <div>
+                  <#--  <p><a id="backToApplication" href="${client.baseUrl}">${kcSanitize(msg("backToApplication"))?no_esc}</a></p>  -->
+                  <q-btn 
+              id="backToApplication" 
+              name="backToApplication" 
+              label="${kcSanitize(msg("backToApplication"))?no_esc}" 
+              color="k-main"  
+              href="${client.baseUrl}" 
+              class="full-width" 
+              unelevated/>
+              </div>
+              </#if>
+          </#if>
+        </div>
       </div>
     </#if>
 </@layout.registrationLayout>

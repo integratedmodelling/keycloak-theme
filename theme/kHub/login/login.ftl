@@ -7,7 +7,7 @@
       <div class="au-top-text">
         <span class="au-top-content">
           <#if client.clientId="security-admin-console">          
-            <#if client?? > ${client.description} </#if>
+            <#if client.description?? > ${client.description} </#if>
           <#else>
             Log into your <strong>k.LAB</strong> account          
           </#if>

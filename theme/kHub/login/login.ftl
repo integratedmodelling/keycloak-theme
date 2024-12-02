@@ -6,7 +6,7 @@
     <#if section="form">
       <div class="au-top-text">
         <span class="au-top-content">
-          <#if client.clientId="security-admin-console">          
+          <#if client?? && client.clientId="security-admin-console">          
             ${client.description}        
           <#else>
             Log into your <strong>k.LAB</strong> account          

@@ -14,6 +14,6 @@
     </div>
   </div>
   <div class="app-name au-app-name">
-    k<span style="color:#d6151a">.</span>Hub
+    k<span style="color:#d6151a">.</span>${client.name}
   </div>
 </div>

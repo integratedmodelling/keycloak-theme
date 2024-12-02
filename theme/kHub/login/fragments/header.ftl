@@ -14,6 +14,8 @@
     </div>
   </div>
   <div class="app-name au-app-name">
+  <#if client??>
     k<span style="color:#d6151a">.</span>${client.name}
+  </#if>
   </div>
 </div>

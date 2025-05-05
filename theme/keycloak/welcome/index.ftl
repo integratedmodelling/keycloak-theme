@@ -22,7 +22,7 @@
     <div class="pf-v5-c-login">
       <div class="pf-v5-c-login__container">
         <header class="pf-v5-c-login__header">
-          <img class="pf-v5-c-brand" src="${resourcesPath}/logo.svg" alt="${productName} Logo">
+          <#--  <img class="pf-v5-c-brand" src="${resourcesPath}/logo.svg" alt="${productName} Logo">  -->
         </header>
         <#if adminConsoleEnabled && (bootstrap || successMessage?has_content)>
           <main class="pf-v5-c-login__main">

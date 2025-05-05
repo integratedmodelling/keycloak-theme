@@ -54,6 +54,7 @@
               <div class="au-wrapper">                            
                 <#include "fragments/banner.ftl">
                 <#nested "form">
+                <#nested "socialProviders">
               </div>
             </div>
           </div>

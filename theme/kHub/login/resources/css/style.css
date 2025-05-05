@@ -112,6 +112,36 @@
   margin: 0.4em;
 }
 
+.au-text-input {
+  color: rgb(96, 125, 139);
+}
+
+.au-select-input {
+  border: 1px solid rgb(0, 0, 0, 0.12);
+  background-color: transparent;
+  color: rgb(96, 125, 139);
+  font: inherit;
+  
+  text-box: trim-both;
+
+  border-radius: 0.25em;
+  display: inline-block;
+  box-sizing: border-box;
+  min-block-size: max(24px, 1.2em);
+  min-inline-size: 24px;
+  white-space: normal;
+}
+
+
+.au-select-input .open {
+  padding: 5px;
+  border: none;
+  background: #f06;
+  border-radius: 5px 0 0 5px;
+  color: white;
+  font-weight: bold;
+}
+
 .au-help {
   font-size: smaller;
   padding-top: 3em;

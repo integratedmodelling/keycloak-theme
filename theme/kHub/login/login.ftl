@@ -110,7 +110,7 @@
               </div>
               <div class="col-7 row jsutify-center k-input-login-style ">
                 <#list social.providers  as p>              
-                  <div class="q-pt-xs">
+                  <div class="q-pt-xs full-width">
                     <q-btn  label="${p.displayName!}" 
                     href="${p.loginUrl}"  
                     class="full-width" 

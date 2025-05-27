@@ -110,13 +110,15 @@
               </div>
               <div class="col-7 row jsutify-center k-input-login-style ">
                 <#list social.providers  as p>              
+                  <div class="q-pt-xs">
                     <q-btn  label="${p.displayName!}" 
                     href="${p.loginUrl}"  
                     class="full-width" 
                     color="k-main" 
                     size="md"
                     outline/>
-                </#list>
+                  </div>
+                </#list>                
               </div>
             </div>
               <!-- EXAMPLE WITH SELECT -->

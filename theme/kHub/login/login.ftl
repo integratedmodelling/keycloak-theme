@@ -15,7 +15,7 @@
       </div>
       <#if realm.password>
         <div class="au-top-info"></div>
-        <q-form class="au-form-container" action="${url.loginAction}" method="post">
+        <q-form class="au-form-container q-pb-md" action="${url.loginAction}" method="post">
           <div class="k-input-login-style">
             <#if !usernameHidden??>
               <q-input
@@ -96,25 +96,68 @@
           </div>
         </q-form>
       </#if>
+      
       <!--
       SocialProviders sections
   -->
-      <#elseif section="socialProviders">
+      <#elseif section="socialProviders">      
         <#if realm.password && social.providers??>
-          <hr style="width: 75%" />
-          <div
-            class="column items-center"
-            :class="{ 'q-pb-xs': $q.screen.xs, 'q-pb-sm': $q.screen.gt.xs }">
-            <div class="text-subtitle1">
-              ${msg("identity-provider-login-label")}
+        
+          <hr />
+            <div class="row justify-between items-center q-pt-sm">
+              <div class="col-4 au-text-input ">
+                ${msg("identity-provider-login-label")}
+              </div>
+              <div class="col-7 row jsutify-center k-input-login-style ">
+                <#list social.providers  as p>              
+                    <q-btn  label="${p.displayName!}" 
+                    href="${p.loginUrl}"  
+                    class="full-width" 
+                    color="k-main" 
+                    size="md"
+                    outline/>
+                </#list>
+              </div>
             </div>
-            <div class="q-pa-sm row jsutify-center">
-              <#list social.providers as p>
-                <q-btn label="${p.displayName!}" color="accent" href="${p.loginUrl}" />
-              </#list>
-            </div>
-          </div>
-        </#if>
+              <!-- EXAMPLE WITH SELECT -->
+              <#--  <div class="row justify-between items-center q-pt-sm">
+                <div class="col-4 au-text-input ">
+                  ${msg("identity-provider-login-label")}
+                </div>
+                <div class="col-7 row jsutify-center k-input-login-style ">
+                  <#list social.providers  as p>              
+
+                    <select name="category"  class="au-select-input  q-pa-sm q-pr-md q-select">
+                    <button>
+                      <selectedcontent></selectedcontent>
+                      <span class=icon></span>
+                    </button>
+                        <#list social.providers! as opt>
+                            <option value="${opt.loginUrl}">${opt.displayName}</option>
+                        </#list>
+                    </select>
+                    </label>
+                  </#list>
+                </div>
+              </div>  -->
+              <!-- EXAMPLE WITH Q-SELECT -->
+              <#--  <div class="row justify-between items-center q-pt-sm">
+                <div class="col-4 au-text-input ">
+                  ${msg("identity-provider-login-label")}
+                </div>
+                <div class="col-7 row jsutify-center k-input-login-style ">
+                  <#assign optionsJson = "[${social.providers?map(o -> '{\"label\": \"' + o.displayName + '\", \"value\": \"' + o.displayName + '\"}')?join(',')}]" >
+                  <#assign selectedValue = social.providers[0].displayName>
+                  <q-select
+                      standout="bg-teal text-white"
+                      outlined
+                      dense    
+                      label="Select"    
+                      :options="${optionsJson}"
+                    />  
+                </div>
+              <div>  -->       
+      </#if>
     </#if>
   </@layout.registrationLayout>
   
